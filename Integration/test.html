@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Campagne Adha 22</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /** Intégration des font Como, Progreso et Alkaline en manuel*/
+        @font-face {
+            font-family: 'Como', sans-serif;
+            src: url('fonts/Como-ExtraLight.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Progreso';
+            src: url('fonts/Progreso-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Alkaline';
+            src: url('fonts/alkaline-demi.otf') format('opentype');
+        }
+
+
+        /** ---------- CSS Body ----------*/        
+        body {
+            background: linear-gradient(rgba(199, 199, 255, 1), white);
+            background-repeat: no-repeat;
+            background-size: 100% 50vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /** ---------- CSS Première section ---------- */
+        .partie1 {
+            display: flex;
+            flex-direction: column; /* Espacement entre les blocs "avis" */
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        .avis {
+            background-color: white;
+            margin-top: 50px;
+            border-radius: 2%;
+            width: 300px;
+            height: max-content;
+            position: relative; 
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);/* Ajout de la position relative pour positionner les éléments enfants */
+        }
+
+        .guillemets {
+            font-family: "Progreso", sans-serif;
+            font-size: 100px;
+            color: black;
+            text-shadow: -2px 2px 4px rgb(181, 181, 244);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            transform: rotate(-15deg);
+        }
+
+        .avisP {
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 18px;
+            color: black;
+            max-width: 225px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nom {
+            font-style: italic;
+            font-family: "Alkaline", sans-serif;
+            font-size: 25px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transform: rotate(-4deg);
+        }
+
+
+        /** ---------- CSS deuxième section ---------- */
+        .partie2 {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 200px;
+        }
+
+        .enfants {
+            width: 700px;
+            border-radius: 100% 50% 90% 50%;
+        }
+
+        .titre {
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .titre1 {
+            font-family: "Progreso", sans-serif;
+            font-size: 40px;
+            text-transform: uppercase; /* Transformation en majuscules */
+            color: black;
+            text-shadow: -2px 2px 4px rgb(181, 181, 244);
+        }
+
+        .titre2 {
+            margin-top: 40px;
+            font-style: italic;
+            font-family: "Alkaline", sans-serif;
+            font-size: 40px;
+            position: absolute;
+            transform: rotate(-3deg);
+        }
+
+        .plus {
+            font-size: 12px;
+            color: rgb(163, 163, 255);
+            border: 2px solid rgb(163, 163, 255);
+            border-radius: 50%;
+            padding: 4px 8px;
+        }
+
+        .questions {
+            margin-top: 60px;
+        }
+
+        .questionsP {
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            max-width: 700px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        /** ---------- CSS de la petite ligne entre les sections ---------- */
+        .trustpilot {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Como', sans-serif;
+            font-size: 16px;
+        }
+
+        .tpLogo {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 10px;
+        }
+
+
+        /** ---------- MODE RESPONSIVE ---------- */
+        @media screen and (max-width: 768px) {
+        /* Modifiez les styles CSS pour les écrans de largeur maximale de 768 pixels */
+
+            /** CSS Body */
+            body {
+                background: linear-gradient(rgba(199, 199, 255, 1), white);
+                background-repeat: no-repeat;
+                background-size: 100% 10vh; /* Modification de la taille du background */
+            }
+
+            /** CSS Première section */
+            .partie1 {
+                display: flex;
+                flex-wrap: wrap; /* Permet de passer en mode colonne lorsque l'espace est insuffisant */
+                justify-content: space-around;
+                margin-bottom: 50px;
+                margin-top: 25px;
+                margin-right: 50px;
+                margin-left: 50px;
+            }
+
+            .avis {
+                background-color: white;
+                border-radius: 2%;
+                width: 90%; /* Modification de la largeur pour occuper la majorité de l'écran */
+                max-width: 300px; /* Ajout d'une largeur maximale pour conserver la taille appropriée des blocs "avis" */
+                height: max-content;
+                position: relative;
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+                margin-bottom: 20px; /* Ajout d'une marge pour séparer les blocs "avis" en mode colonne */
+            }
+
+            /** CSS deuxième section */
+            .partie2 {
+                display: flex;
+                flex-direction: column; /* Passage en mode colonne */
+                align-items: center; /* Centrage horizontal des éléments */
+                margin-top: 100px; /* Augmentation de la marge supérieure pour compenser le passage en mode colonne */
+            }
+
+            .enfants {
+                width: 90%; /* Modification de la largeur pour occuper la majorité de l'écran */
+                max-width: 700px; /* Ajout d'une largeur maximale pour conserver la taille appropriée de l'image */
+                border-radius: 100% 50% 90% 50%;
+                margin-bottom: 50px; /* Ajout d'une marge pour séparer l'image des questions */
+            }
+
+            .titre {
+                text-align: center; /* Centrage horizontal du titre */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- PARTIE 1: Les avis -->
+    <div class="partie1">
+        <div class="avis">
+            <span class="guillemets">"</span>
+            <p class="avisP">Vos actions envers ces populations en difficulté vous honorent. Si nos dons sont une goutte d’eau dans cet océan de besoins, c’est en multipliant vos sollicitations que nous continuerons tous à apporter le sourire et un peu de réconfort à ces hommes, femmes et enfants. Qu’Allah vous aide dans vos réalisations !!</p>
+            <span class="nom">Luois</span>
+        </div>
+
+        <div class="avis" style="margin-top: 50px;">
+            <span class="guillemets">"</span>
+            <p class="avisP">Je trouve formidable votre association et tout l’ensemble et le bien que vous faites. J’avais déjà fait un don pour l’Aïd et vous me donnez un suivi très sérieux. Qu’Allah vous soutienne et vous ouvre toutes les portes pour accomplir les bienfaits que vous partagez, bravoooooo</p>
+            <span class="nom">Senaissa</span>
+        </div>
+
+        <div class="avis">
+            <span class="guillemets">"</span>
+            <p class="avisP">Depuis 2010, ils sont restés égaux à eux-mêmes, des membres qui se dévouent pleinement à autrui. Leurs actions sont vitales au vu de la situation géopolitique actuelle: venir en aide aux personnes en souffrance. <br>”Ils donnaient de la nourriture - pour l’amour du Seigneur - au Pauvre, à l’Orphelin, au Captif. “Nous vous nourrissons”. [disaient-ils], “pour l’amour d’Allah, ne désirant de vous ni récompense ni gratitude...”</p>
+            <span class="nom">Inès</span>
+        </div>
+
+        <div class="avis" style="margin-top: 50px;">
+            <span class="guillemets">"</span>
+            <p class="avisP">Merci Ummah Charity ! <br> Pour votre transparence. Pour la diversité des causes que vous soutenez. Pour votre investissement sur le terrain, en France et à l’étranger. Pour la communauté que vous avez rassemblé.</p>
+            <span class="nom">Amandine</span>
+        </div>
+    </div>
+
+    <!-- Petite phrase entre les deux sections -->
+    <span class="trustpilot">Ces avis sont issus de la plate-forme indépendante <img src="logo.png" alt="logo" class="tpLogo"><a href="https://fr.trustpilot.com/review/ummahcharity.org">voir tous les avis</a></span>
+
+    <!-- PARTIE 2: Les questions -->
+    <div class="partie2">
+        <img src="enfants.png" alt="enfants" class="enfants">
+
+        <div class="questions">
+            <div class="titre">
+                <span class="titre1">DES QUESTIONS</span> <!-- Modification en majuscules -->
+                <span class="titre2">à propos du sacrifice ?</span>
+            </div>
+
+            <p class="questionsP"><span class="plus">+</span> Dans quels pays allez-vous distribuer cette année ?</p>
+            <p class="questionsP"><span class="plus">+</span> Quels types de bêtes sont prévues pour le sacrifice ?</p>
+            <p class="questionsP"><span class="plus">+</span> Où sera attribué mon sacrifice ?</p>
+            <p class="questionsP"><span class="plus">+</span> Mon nom est-il prononcé lors du sacrifice ?</p>
+            <p class="questionsP"><span class="plus">+</span> Quand sera effectué mon sacrifice ?</p>
+            <p class="questionsP"><span class="plus">+</span> Comment peut-on effectuer le sacrifice en France ?</p>
+            <p class="questionsP"><span class="plus">+</span> Comment puis-je savoir si mon sacrifice a bien été effectué ?</p>
+        </div>
+    </div>
+
+</body>
+</html>
